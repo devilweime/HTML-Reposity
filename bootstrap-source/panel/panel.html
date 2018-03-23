@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>panel高度自增长</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/myCss.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="blank">
+                <div class="row">
+                    <div onclick="baidu()" class="col-xs-6 col-md-6">
+                        百度
+                    </div>
+                    <div onclick="sogou()" class="col-xs-6 col-md-6">
+                        搜狗
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-12 mt_5">
+           <!-- <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="preview" class="embed-responsive-item" src="http://www.baidu.com"></iframe>
+            </div>-->
+            <div class="embed-responsive embed-responsive-16by9">
+                <div id="panel" class="embed-responsive-item auto_height"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+
+        function baidu() {
+            $.ajax({
+                type: "GET",
+                url: "http://www.baidu.com",
+                success: function(data){
+                    $("#panel").html(data);
+                }
+            });
+        }
+        function sogou() {
+            $.ajax({
+                type: "GET",
+                url: "http://www.sogou.com",
+                success: function(data){
+                    $("#panel").html(data);
+                }
+            });
+        }
+
+</script>
+
+</html>

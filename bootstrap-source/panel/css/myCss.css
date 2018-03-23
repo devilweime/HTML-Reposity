@@ -1,0 +1,25 @@
+body{
+    background: #eee;
+}
+
+.form-signin{
+    background: #fff;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.blank{
+    background: #fff;
+}
+
+.mt_10{
+    margin-top: 10px;
+}
+.mt_5{
+    margin-top: 5px;
+}
+.auto_height{
+    height: auto;
+    overflow: hidden;
+}

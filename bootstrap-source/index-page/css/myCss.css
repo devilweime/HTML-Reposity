@@ -1,0 +1,54 @@
+body{
+    background: #ebebeb;
+    margin: 0;
+}
+.blank{
+    background: #fff;
+}
+.main-header{
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+.branding{
+    display: inline-block;
+
+}
+
+.nav_header{
+    background: #fff;
+}
+
+.menu{
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    display: inline-block;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+.selected_menu{
+    border-bottom: 2px solid #e67e22;
+    margin-bottom: -2px;
+}
+
+.menu li:link{}
+.menu li:visited{}
+.menu li:hover{
+    color:#e67e22;
+}
+.menu li:active{}
+
+.content-wrap{
+    margin-top: 20px;
+}
+.main_content{
+    background: #fff;
+}
+.sidebar{
+    background: #fff;
+}

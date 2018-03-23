@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe内容操作</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/myCss.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="blank">
+                <div class="row">
+                    <div onclick="baidu()" class="col-xs-6 col-md-6">
+                        百度
+                    </div>
+                    <div onclick="sogou()" class="col-xs-6 col-md-6">
+                        搜狗
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-12 mt_5">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="preview" class="embed-responsive-item" src="http://www.baidu.com"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+
+        function baidu() {
+            $.ajax({
+                type: "GET",
+                dataType:'jsonp',
+                processData: false,
+                url: "http://www.baidu.com",
+                success: function(data){
+                    codePreview(data);
+                }
+            });
+        }
+        function sogou() {
+            $.ajax({
+                type: "GET",
+                dataType:'jsonp',
+                processData: false,
+                url: "http://www.sogou.com",
+                success: function(data){
+                    codePreview(data);
+                }
+            });
+        }
+
+    function codePreview(value) {
+        var doc = document.getElementById("preview").contentDocument || document.frames["preview"].document;
+        doc.body.innerHTML = value;
+    }
+
+</script>
+
+</html>
