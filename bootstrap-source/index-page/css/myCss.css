@@ -49,6 +49,61 @@ body{
 .main_content{
     background: #fff;
 }
+
+.post_head{
+    text-align: center;
+}
 .sidebar{
-    background: #fff;
+
+}
+
+.meta{
+    color:#959595;
+}
+
+.content{
+    padding: 30px 0;
+    text-align: left;
+    font:400 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+    color: #444443;
+}
+
+
+.btn{
+    padding: 7px 14px;
+    border-radius: 2px;
+}
+
+.btn-default{
+    background: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+.btn-default:hover {
+    border: 1px solid #303030;
+    background: #303030;
+    color: #ffffff;
+}
+
+.btn-default:focus {
+    outline: none;
+}
+
+.btn-default[disabled] {
+    border: 1px solid #303030;
+    background: #303030;
+    color: #ffffff;
+}
+
+.read_btn{
+    padding: 0 0 30px 0;
+}
+
+.post_footer{
+    border-top: 1px solid #ebebeb;
+    width: 100%;
+}
+.file_icon{
+    padding: 20px 0;
 }
