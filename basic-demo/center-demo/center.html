@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平居中解决方案</title>
+
+    <style type="text/css">
+
+        div {
+            border: 1px solid red;
+        }
+
+        .container01 {
+            position: relative;
+        }
+
+        .center01 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /*以上操作会使内盒子紧靠右下方*/
+
+            width: 100px;
+            height: 100px;
+            margin: -50px 0 0 -50px;
+        }
+
+        .container02 {
+            position: relative;
+        }
+
+        .center02 {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        span {
+            color: red;
+        }
+
+        .container03 {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            border-spacing:20px;
+        }
+
+        .center03 {
+            display: inline-block;
+        }
+
+
+        .container04{
+            position: relative;
+        }
+
+        .center04{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .container05{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center05{
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container01" style="width: 200px;height: 200px;margin: 20px;">
+    <div class="center01" style="width: 100px;height: 100px;">#center01---已知宽高实现水平垂直居中</div>
+</div>
+
+
+<div class="container02" style="width: 200px;height: 200px;margin: 20px;">
+    <div class="center02" style="width: 100px;height: 100px;">#center02---已知宽高实现水平垂直居中</div>
+</div>
+
+<br>
+<span>
+    以上基于相对定位的实现
+</span>
+<br>
+
+<div class="container03" style="width: 300px;height: 300px;margin: 20px;">
+    <div class="center03" style="width: 100px">#center02---未知知宽高实现水平垂直居中，内部元素要求是inline或者inline-block,margin和padding对table一家无效</div>
+</div>
+
+
+<div class="container04" style="width: 200px;height: 200px;margin: 20px;">
+    <div class="center04" style="width: 100px;">#center04---未知宽高实现水平垂直居中，利用Css3的transform</div>
+</div>
+
+
+<div class="container05" style="width: 200px;height: 200px;margin: 20px;">
+    <div class="center05" style="width: 100px;">#center05---未知宽高实现水平垂直居中，flex伸缩盒子</div>
+</div>
+
+</body>
+</html>

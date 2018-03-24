@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遮罩层</title>
+    <style type="text/css">
+
+        .container{
+            position: relative;
+        }
+
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .mask{
+            position:absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            overflow: hidden;
+
+        }
+
+        .widow{
+            width: 300px;
+            height: 200px;
+            background: #ffffff;
+            border-radius: 2px;
+            z-index: 9999;
+        }
+
+    </style>
+</head>
+<body>
+
+<div style="width: 400px;height: 400px;border: 1px solid red;margin: 0 auto">
+    <a href="https://www.baidu.com/">层内内容</a>
+</div>
+
+<div class="mask container">
+
+    <div class="widow center">弹出窗口</div>
+
+</div>
+</body>
+</html>
