@@ -1,16 +1,16 @@
 #忽略规则
 
 #Intellij project files
-/.idea
+/**/.idea
 
 #eclipse
-/.settings
+/**/*.settings
 
 #svn
-/.svn
+/**/*.svn
 
 #maven
-/target
-.classpath
-.project
+/**/target
+/**/*.classpath
+/**/*.project
 
