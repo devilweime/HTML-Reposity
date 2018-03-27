@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>并排宽度</title>
+
+    <style type="text/css">
+
+        div {
+            height: 50px;
+            float: right;
+           /* border: 1px solid;*/
+        }
+
+        .col-1 {
+            width: 8.33333333%;
+            background: blue;
+        }
+
+        .col-11 {
+            width: 91.66666667%;
+            background: red;
+        }
+        .col-6{
+            width: 50%;
+        }
+
+
+        .col-1,.col-11,.col-6{
+            position:relative;
+            min-height:1px;
+           /* padding-right:15px;
+            padding-left:15px*/
+        }
+
+    </style>
+
+</head>
+<body>
+<p style="color: red">简单的百分比div并排时不能存在solid、padding、margin</p>
+<br>
+<div class="col-1"></div>
+<div class="col-11"></div>
+<div class="col-6" style="background: aqua"></div>
+<div class="col-6" style="background: antiquewhite"></div>
+
+</body>
+</html>
